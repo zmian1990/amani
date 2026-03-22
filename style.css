@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-gradient: linear-gradient(to bottom, #f4f6f8, #dfe6ec);
+  --text-color: #1a1a1a;
+  --subtext-color: #555;
+  --button-bg: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  --bg-gradient: linear-gradient(to bottom, #1e2a35, #0f1720);
+  --text-color: #ffffff;
+  --subtext-color: #cbd5e1;
+  --button-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gradient);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 320px;
+  width: 80%;
+  height: auto;
+}
+
+.coming-soon {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-size: 14px;
+  max-width: 420px;
+  color: var(--subtext-color);
+}
+
+#theme-toggle {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: var(--button-bg);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  backdrop-filter: blur(6px);
+}
+
+#theme-toggle:hover {
+  opacity: 0.8;
+}
