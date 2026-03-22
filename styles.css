@@ -6,71 +6,77 @@
 
 /* ===== THEME ===== */
 :root {
-  /* Warm neutral (Maman-inspired) */
   --bg: #f5f1ea;
-  --bg-accent: #e9e2d8;
-
+  --bg-soft: #efe8de;
   --text-primary: #2f2a26;
   --text-secondary: #6b625b;
-
-  --card-bg: rgba(255, 255, 255, 0.6);
+  --accent: #d8cfc3;
 }
 
 [data-theme="dark"] {
-  --bg: #1a1a1a;
-  --bg-accent: #111111;
-
+  --bg: #121212;
+  --bg-soft: #1a1a1a;
   --text-primary: #f5f5f5;
   --text-secondary: #b8b8b8;
-
-  --card-bg: rgba(255, 255, 255, 0.05);
+  --accent: #2a2a2a;
 }
 
 /* ===== BASE ===== */
 body {
   min-height: 100vh;
+  background: radial-gradient(circle at top, var(--bg), var(--bg-soft));
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at top, var(--bg), var(--bg-accent));
-  font-family: 'Inter', sans-serif;
-  color: var(--text-primary);
-  text-align: center;
   padding: 24px;
 }
 
-/* ===== CONTAINER ===== */
+/* subtle texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* ===== LAYOUT ===== */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
   max-width: 520px;
   width: 100%;
+  animation: fadeIn 1.2s ease;
 }
 
 /* ===== LOGO ===== */
 .logo {
-  width: clamp(180px, 38vw, 320px);
+  width: clamp(180px, 34vw, 300px);
   height: auto;
 }
 
-/* ===== TEXT ===== */
-.coming-soon {
-  font-size: 12px;
+/* ===== CONTENT ===== */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* small label */
+.eyebrow {
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--text-secondary);
 }
 
-.subtext {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  max-width: 420px;
-}
-
-/* ===== DIVIDER (new subtle detail) ===== */
+/* divider */
 .divider {
   width: 40px;
   height: 1px;
@@ -78,24 +84,60 @@ body {
   opacity: 0.3;
 }
 
+/* main message */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+/* ===== SOCIAL ===== */
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.social a:hover {
+  border-bottom: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+}
+
 /* ===== TOGGLE ===== */
 #theme-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: var(--card-bg);
+  background: transparent;
   border: none;
-  padding: 6px 10px;
-  border-radius: 20px;
+  font-size: 14px;
   cursor: pointer;
-  font-size: 12px;
-  color: var(--text-primary);
-  backdrop-filter: blur(6px);
+  color: var(--text-secondary);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 480px) {
   .container {
-    gap: 26px;
+    gap: 28px;
   }
 }
