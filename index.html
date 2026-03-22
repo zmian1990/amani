@@ -5,60 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>amani – coming soon</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Theme Toggle -->
-  <button id="theme-toggle">☀︎ / ☾</button>
+<button id="theme-toggle">☀︎ / ☾</button>
 
-  <main class="container">
+<main class="container">
 
-    <!-- Logo -->
-    <img src="amani-logo.png" alt="amani logo" class="logo" />
+  <img src="amani_logo_1.png" alt="amani logo" class="logo" />
 
-    <div class="content">
-      <p class="eyebrow">coming soon</p>
+  <div class="content">
+    <p class="eyebrow">coming soon</p>
 
-      <div class="divider"></div>
+    <div class="divider"></div>
 
-      <h1>
-        Coffee, kitchen, and quiet moments —
-        thoughtfully crafted.
-      </h1>
+    <h1>
+      Coffee, kitchen, and quiet moments —
+      thoughtfully crafted.
+    </h1>
 
-      <!-- Instagram -->
-      <div class="social">
-        <a href="https://instagram.com/amanicoffeetx" target="_blank">
-          Follow along — @amanicoffeetx
-        </a>
-      </div>
+    <div class="social">
+      <a href="https://instagram.com/amanicoffeetx" target="_blank">
+        Follow along — @amanicoffeetx
+      </a>
     </div>
+  </div>
 
-  </main>
+</main>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const root = document.documentElement;
+<script>
+const toggle = document.getElementById('theme-toggle');
+const root = document.documentElement;
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      root.setAttribute('data-theme', savedTheme);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  root.setAttribute('data-theme', savedTheme);
+} else {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+}
 
-    toggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme');
-      const newTheme = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  </script>
+toggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+</script>
 
 </body>
 </html>
