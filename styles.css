@@ -90,6 +90,23 @@ h1 {
   color: var(--text-primary);
 }
 
+.contact {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  transition: border-color 0.2s ease;
+}
+
+.contact a:hover {
+  border-color: rgba(0,0,0,0.6);
+}
+
 #theme-toggle {
   position: absolute;
   top: 20px;
