@@ -3,27 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amani – Coming Soon</title>
+  <title>amani – coming soon</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    
-    <button id="theme-toggle" aria-label="Toggle theme">
-      ☀️ / 🌙
-    </button>
 
-    <img src="amani_logo_1.png" alt="Amani Logo" class="logo" />
+  <!-- Theme Toggle -->
+  <button id="theme-toggle">☀︎ / ☾</button>
 
-    <div class="coming-soon">Coming Soon</div>
+  <main class="container">
 
-    <div class="subtext">
-      A food concept rooted in warmth, culture, and everyday ritual.
+    <!-- Logo -->
+    <img src="amani-logo.png" alt="amani logo" class="logo" />
+
+    <div class="content">
+      <p class="eyebrow">coming soon</p>
+
+      <div class="divider"></div>
+
+      <h1>
+        Coffee, kitchen, and quiet moments —
+        thoughtfully crafted.
+      </h1>
+
+      <!-- Instagram -->
+      <div class="social">
+        <a href="https://instagram.com/amanicoffeetx" target="_blank">
+          Follow along — @amanicoffeetx
+        </a>
+      </div>
     </div>
 
-  </div>
+  </main>
 
   <script>
     const toggle = document.getElementById('theme-toggle');
@@ -44,5 +59,6 @@
       localStorage.setItem('theme', newTheme);
     });
   </script>
+
 </body>
 </html>
