@@ -4,85 +4,98 @@
   box-sizing: border-box;
 }
 
-/* THEME */
+/* ===== THEME ===== */
 :root {
-  --bg: linear-gradient(180deg, #7fa6c9 0%, #5f87ad 100%);
-  --text-primary: rgba(255, 255, 255, 0.95);
-  --text-secondary: rgba(255, 255, 255, 0.7);
+  /* Warm neutral (Maman-inspired) */
+  --bg: #f5f1ea;
+  --bg-accent: #e9e2d8;
+
+  --text-primary: #2f2a26;
+  --text-secondary: #6b625b;
+
+  --card-bg: rgba(255, 255, 255, 0.6);
 }
 
 [data-theme="dark"] {
-  --bg: linear-gradient(180deg, #1e2a35 0%, #0f1720 100%);
-  --text-primary: rgba(255, 255, 255, 0.95);
-  --text-secondary: rgba(255, 255, 255, 0.65);
+  --bg: #1a1a1a;
+  --bg-accent: #111111;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #b8b8b8;
+
+  --card-bg: rgba(255, 255, 255, 0.05);
 }
 
-/* BASE */
+/* ===== BASE ===== */
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg);
+  background: radial-gradient(circle at top, var(--bg), var(--bg-accent));
   font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
   text-align: center;
   padding: 24px;
 }
 
-/* CONTAINER */
+/* ===== CONTAINER ===== */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
   max-width: 520px;
   width: 100%;
 }
 
-/* LOGO */
+/* ===== LOGO ===== */
 .logo {
-  width: clamp(180px, 40vw, 340px);
+  width: clamp(180px, 38vw, 320px);
   height: auto;
-  opacity: 0.95;
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .coming-soon {
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--text-secondary);
 }
 
 .subtext {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: 15px;
   line-height: 1.6;
   color: var(--text-secondary);
   max-width: 420px;
 }
 
-/* TOGGLE */
+/* ===== DIVIDER (new subtle detail) ===== */
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--text-secondary);
+  opacity: 0.3;
+}
+
+/* ===== TOGGLE ===== */
 #theme-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--card-bg);
   border: none;
   padding: 6px 10px;
   border-radius: 20px;
   cursor: pointer;
   font-size: 12px;
-  color: white;
+  color: var(--text-primary);
   backdrop-filter: blur(6px);
 }
 
-/* MOBILE REFINEMENT */
+/* ===== MOBILE ===== */
 @media (max-width: 480px) {
   .container {
-    gap: 22px;
-  }
-
-  .subtext {
-    padding: 0 10px;
+    gap: 26px;
   }
 }
