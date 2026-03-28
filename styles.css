@@ -26,7 +26,7 @@
   background: url('/insta_dark.png') no-repeat center / contain;
 }
 
-.phone::before {
+.email::before {
   content: "";
   display: block;
   width: 18px;
@@ -36,7 +36,7 @@
   background: url('/phone_light.png') no-repeat center / contain;
 }
 
-[data-theme="dark"] .phone::before {
+[data-theme="dark"] .email::before {
   background: url('/phone_dark.png') no-repeat center / contain;
 }
 
@@ -54,7 +54,7 @@
   background: url('/tiktok_dark.png') no-repeat center / contain;
 }
 
-.social-icons div:hover {
+.social-icons a:hover {
   opacity: 1;
   transform: translateY(-1px);
 }
