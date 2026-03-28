@@ -6,16 +6,19 @@
 
 .logo {
   width: clamp(180px, 34vw, 300px);
-  height: 120px;
-
-  background-image: url('/amani_logo_2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 120px; /* adjust based on your logo proportions */
 }
 
-[data-theme="dark"] .logo {
-  background-image: url('/amani_logo_dark_2.png');
+.logo::before {
+  content: url('amani_logo_2.svg');
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Dark mode logo swap */
+[data-theme="dark"] .logo::before {
+  content: url('amani_logo_dark_2.svg');
 }
 
 :root {
