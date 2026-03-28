@@ -5,7 +5,7 @@
 }
 
 .logo {
-  width: clamp(200px, 40vw, 600px);
+  width: clamp(200px, 50vw, 600px);
   margin: 0 auto;
 }
 
