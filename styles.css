@@ -6,24 +6,20 @@
 
 .logo {
   width: clamp(180px, 34vw, 300px);
-  height: 120px;
-  position: relative;
+  margin: 0 auto;
 }
 
 .logo::before {
   content: "";
-  position: absolute;
-  inset: 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 1; /* adjust to your logo */
 
-  background-image: url('/amani_logo_2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('/amani_logo_2.png') no-repeat center / contain;
 }
 
-/* Dark mode */
 [data-theme="dark"] .logo::before {
-  background-image: url('/amani_logo_dark_2.png');
+  background: url('/amani_logo_dark_2.png') no-repeat center / contain;
 }
 
 :root {
