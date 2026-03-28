@@ -4,6 +4,61 @@
   box-sizing: border-box;
 }
 
+.social-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px; /* pulls closer to logo nicely */
+}
+
+.insta::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: url('/insta_light.png') no-repeat center / contain;
+}
+
+[data-theme="dark"] .insta::before {
+  background: url('/insta_dark.png') no-repeat center / contain;
+}
+
+.phone::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: url('/phone_light.png') no-repeat center / contain;
+}
+
+[data-theme="dark"] .phone::before {
+  background: url('/phone_dark.png') no-repeat center / contain;
+}
+
+.tiktok::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: url('/tiktok_light.png') no-repeat center / contain;
+}
+
+[data-theme="dark"] .tiktok::before {
+  background: url('/tiktok_dark.png') no-repeat center / contain;
+}
+
+.social-icons div:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
 .logo::before {
   content: "";
   display: block;
@@ -86,19 +141,6 @@ h1 {
   font-weight: 400;
   line-height: 1.5;
   max-width: 420px;
-}
-
-.social a {
-  font-size: 13px;
-  color: var(--text-secondary);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.social a:hover {
-  border-bottom: 1px solid var(--text-secondary);
-  color: var(--text-primary);
 }
 
 .story {
