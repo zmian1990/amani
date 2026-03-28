@@ -4,17 +4,29 @@
   box-sizing: border-box;
 }
 
+.logo {
+  width: clamp(180px, 34vw, 300px);
+  height: 120px;
+
+  background-image: url('amani_logo_2.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+[data-theme="dark"] .logo {
+  background-image: url('amani_logo_dark_2.svg');
+}
+
 :root {
-  --bg: #f5f1ea;
-  --bg-soft: #efe8de;
+  --bg: #f3e4cd;
   --text-primary: #2f2a26;
   --text-secondary: #6b625b;
   --accent: #d8cfc3;
 }
 
 [data-theme="dark"] {
-  --bg: #121212;
-  --bg-soft: #1a1a1a;
+  --bg: #6b3328;
   --text-primary: #f5f5f5;
   --text-secondary: #b8b8b8;
   --accent: #2a2a2a;
