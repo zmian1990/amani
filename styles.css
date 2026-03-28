@@ -163,6 +163,10 @@ h1 {
   color: var(--text-primary);
 }
 
+.main {
+  text-align: justify;
+}
+
 #theme-toggle {
   position: absolute;
   top: 20px;
