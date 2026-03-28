@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.logo {
-  width: clamp(200px, 50vw, 600px);
-  margin: 0 auto;
-}
-
 .logo::before {
   content: "";
   display: block;
@@ -60,7 +55,8 @@ body {
 }
 
 .logo {
-  width: clamp(180px, 34vw, 300px);
+  width: clamp(200px, 50vw, 600px);
+  margin: 0 auto;
   height: auto;
 }
 
