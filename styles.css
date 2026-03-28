@@ -10,7 +10,7 @@
 }
 
 .logo::before {
-  content: url('amani_logo_2.svg');
+  content: url('amani_logo_2.png');
   display: block;
   width: 100%;
   height: auto;
@@ -18,7 +18,7 @@
 
 /* Dark mode logo swap */
 [data-theme="dark"] .logo::before {
-  content: url('amani_logo_dark_2.svg');
+  content: url('amani_logo_dark_2.png');
 }
 
 :root {
