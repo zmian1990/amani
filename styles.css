@@ -8,14 +8,14 @@
   width: clamp(180px, 34vw, 300px);
   height: 120px;
 
-  background-image: url('amani_logo_2.svg');
+  background-image: url('amani_logo_2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 [data-theme="dark"] .logo {
-  background-image: url('amani_logo_dark_2.svg');
+  background-image: url('amani_logo_dark_2.png');
 }
 
 :root {
