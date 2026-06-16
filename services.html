@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What I do — Amani</title>
+  <meta name="description" content="Amani brings specialty cakes, flaky savory bites, and coffee to catering, pop-ups, and events — individually packaged in shooter cups or single-serve portions." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☀︎ / ☾</button>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Amani — home"></a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html">home</a>
+    <a href="menu.html">menu</a>
+    <a href="services.html" aria-current="page">services</a>
+  </nav>
+
+  <ul class="social-icons">
+    <li><a href="https://instagram.com/amanicoffeetx" target="_blank" rel="noopener" class="icon insta" aria-label="Amani on Instagram"></a></li>
+    <li><a href="https://tiktok.com/@amanicoffeetx" target="_blank" rel="noopener" class="icon tiktok" aria-label="Amani on TikTok"></a></li>
+    <li><a href="mailto:contact@amani.coffee" class="icon email" aria-label="Email Amani"></a></li>
+    <li><a href="tel:+12019361308" class="icon phone" aria-label="Call Amani at 201 936 1308"></a></li>
+  </ul>
+</header>
+
+<main class="services" id="main">
+
+  <div class="services-intro">
+    <h1>What I do</h1>
+    <p>
+      Right now, I'm focused on catering, pop-ups, and events — bringing my
+      signature milk cakes, flaky savory bites, and coffee to gatherings of every size.
+    </p>
+  </div>
+
+  <section class="offerings" aria-labelledby="offerings-heading">
+    <h2 id="offerings-heading" class="sr-only">My offerings</h2>
+
+    <ul class="offering-grid">
+      <li class="offering-card">
+        <h3>Catering</h3>
+        <p>
+          From intimate dinners to large celebrations, I put together sweet and
+          savory spreads tailored to your guest count and the feeling you want in the room.
+        </p>
+      </li>
+
+      <li class="offering-card">
+        <h3>Pop-ups</h3>
+        <p>
+          Catch me at markets and pop-up events around town. Follow along on
+          <a href="https://instagram.com/amanicoffeetx" target="_blank" rel="noopener">Instagram</a>
+          for the latest dates and locations.
+        </p>
+      </li>
+
+      <li class="offering-card">
+        <h3>Events</h3>
+        <p>
+          Weddings, birthdays, showers, and corporate gatherings — I'll help you build
+          a menu of specialty cakes and savory bites that fit the moment.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sizing" aria-labelledby="sizing-heading">
+    <div class="sizing-header">
+      <p class="sizing-eyebrow">My cakes</p>
+      <h2 id="sizing-heading">Individually packaged</h2>
+      <p class="sizing-lede">
+        My specialty cakes come individually portioned and packaged — beautifully
+        presented so every guest gets their own, with no slicing or serving on the day.
+      </p>
+    </div>
+
+    <ul class="sizing-grid">
+      <li class="sizing-card">
+        <h3>Shooter cups</h3>
+        <p>Single-serve specialty cakes layered into cups — a few-bite portion that's easy to hand out and grab on the go.</p>
+      </li>
+      <li class="sizing-card">
+        <h3>Serving portions</h3>
+        <p>A slightly larger single-serve portion, individually packaged and just as presentable — for when one cup isn't quite enough.</p>
+      </li>
+    </ul>
+
+    <p class="sizing-note">
+      Tell me about your event and I'll recommend the right format, portion size, and flavors.
+    </p>
+  </section>
+
+  <section class="services-cta" aria-label="Get in touch">
+    <h2>Planning something?</h2>
+    <p>I'd love to be part of it. Reach out with your date, guest count, and any flavor wishes.</p>
+    <div class="services-cta__actions">
+      <a class="cta" href="mailto:contact@amani.coffee?subject=Event%20inquiry">Email me</a>
+      <a class="cta cta--ghost" href="tel:+12019361308">Call 201 936 1308</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Amani · <a href="mailto:contact@amani.coffee">contact@amani.coffee</a></p>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

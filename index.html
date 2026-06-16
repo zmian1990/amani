@@ -3,82 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>amani – coming soon</title>
+  <title>Amani — coffee, kitchen & quiet moments</title>
+  <meta name="description" content="Amani is a coffee and dessert concept built around signature flavored milk cakes and savory, flaky bites. Amani means peace." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<button id="theme-toggle">☀︎ / ☾</button>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<main class="container">
+<button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☀︎ / ☾</button>
 
-  <div class="logo"></div>
-  
-  <div class="social-icons">
-    <a href="https://instagram.com/amanicoffeetx" target="_blank" class="icon insta" aria-label="Instagram"></a>
-    <a href="https://tiktok.com/@amanicoffeetx" target="_blank" class="icon tiktok" aria-label="Tiktok"></a>
-    <a href="mailto:contact@amani.coffee" class="icon email" aria-label="Email"></a>
-  </div>
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Amani — home"></a>
 
-  <div class="content">
-    <!-- <p class="eyebrow">coming soon</p>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html" aria-current="page">home</a>
+    <a href="menu.html">menu</a>
+    <a href="services.html">services</a>
+  </nav>
 
-    <div class="divider"></div> -->
+  <ul class="social-icons">
+    <li><a href="https://instagram.com/amanicoffeetx" target="_blank" rel="noopener" class="icon insta" aria-label="Amani on Instagram"></a></li>
+    <li><a href="https://tiktok.com/@amanicoffeetx" target="_blank" rel="noopener" class="icon tiktok" aria-label="Amani on TikTok"></a></li>
+    <li><a href="mailto:contact@amani.coffee" class="icon email" aria-label="Email Amani"></a></li>
+    <li><a href="tel:+12019361308" class="icon phone" aria-label="Call Amani at 201 936 1308"></a></li>
+  </ul>
+</header>
 
-    <h1>
-      Coffee, kitchen, and quiet moments —
-      thoughtfully crafted.
-    </h1>
+<main class="home" id="main">
 
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Coffee, kitchen, and quiet moments — thoughtfully crafted.</h1>
+      <p class="hero-emphasis">
+        Amani is a feeling. A quiet moment in a busy day. A reminder of home,
+        wherever you come from.
+      </p>
+      <div class="hero-actions">
+        <a class="cta" href="menu.html">View my menu</a>
+        <a class="cta cta--ghost" href="services.html">What I do</a>
+      </div>
+    </div>
+
+    <img
+      class="hero-image"
+      src="cake.jpg"
+      width="1000"
+      height="1247"
+      loading="eager"
+      alt="A slice of milk cake topped with whipped cream, slivered pistachios, and dried rose petals."
+    />
+  </section>
+
+  <section class="home-lower">
     <div class="story">
+      <h2 class="story-heading">My story</h2>
+
       <p>
         <strong>Amani</strong> was created with a simple intention: to share food that brings comfort, connection, and a sense of peace.
       </p>
-    
+
       <p>
-        Our story is shaped by late night chai conversations, family kitchens filled with the scent of cardamom and butter, and recipes passed down, reimagined, and shared with love. What started as a small dessert concept centered around our signature flavored milk cakes and savory, flaky bites has grown into something more. It is now where cultures meet, where tradition feels modern, and where every detail is intentional.
+        My story is shaped by late night chai conversations, family kitchens filled with the scent of cardamom and butter, and recipes passed down, reimagined, and shared with love. What started as a small dessert concept centered around my signature flavored milk cakes and savory, flaky bites has grown into something more. It is now where cultures meet, where tradition feels modern, and where every detail is intentional.
       </p>
-    
+
       <p>
         Each milk cake is crafted to be soft, indulgent, and deeply nostalgic. Each savory bite is layered, buttery, and made to be shared. Every cup of coffee is an invitation to slow down.
       </p>
-    
+
       <p>
-        Amani means peace, and that is what we hope you feel in every bite and every sip.
-      </p>
-    
-      <p class="emphasis">
-        Amani is a feeling. A quiet moment in a busy day. A reminder of home, wherever you come from.
-      </p>
-    
-      <p>
-        Amani welcomes you to share what we love most: food that feels like care and experiences that leave you just a little more at peace than when you arrived.
+        Amani means peace, and that is what I hope you feel in every bite and every sip. I'd love to share with you what I love most: food that feels like care and experiences that leave you just a little more at peace than when you arrived.
       </p>
     </div>
 
+    <aside class="home-services" aria-labelledby="home-services-heading">
+      <h2 id="home-services-heading">Catering, pop-ups &amp; events</h2>
+      <p>
+        Right now I'm focused on catering, pop-ups, and events — with specialty cakes
+        individually packaged in shooter cups or single-serve portions.
+      </p>
+      <a class="link-arrow" href="services.html">See what I offer</a>
+    </aside>
+  </section>
+
 </main>
 
-<script>
-const toggle = document.getElementById('theme-toggle');
-const root = document.documentElement;
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Amani · <a href="mailto:contact@amani.coffee">contact@amani.coffee</a></p>
+</footer>
 
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  root.setAttribute('data-theme', savedTheme);
-} else {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-}
-
-toggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-});
-</script>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

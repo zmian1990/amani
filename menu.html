@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu — Amani</title>
+  <meta name="description" content="The Amani menu: signature milk cakes, cheesecakes, cobblers, cookies and more on the sweet side, plus savory flaky bites and pies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☀︎ / ☾</button>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Amani — home"></a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html">home</a>
+    <a href="menu.html" aria-current="page">menu</a>
+    <a href="services.html">services</a>
+  </nav>
+
+  <ul class="social-icons">
+    <li><a href="https://instagram.com/amanicoffeetx" target="_blank" rel="noopener" class="icon insta" aria-label="Amani on Instagram"></a></li>
+    <li><a href="https://tiktok.com/@amanicoffeetx" target="_blank" rel="noopener" class="icon tiktok" aria-label="Amani on TikTok"></a></li>
+    <li><a href="mailto:contact@amani.coffee" class="icon email" aria-label="Email Amani"></a></li>
+    <li><a href="tel:+12019361308" class="icon phone" aria-label="Call Amani at 201 936 1308"></a></li>
+  </ul>
+</header>
+
+<main class="menu" id="main">
+
+  <div class="menu-intro">
+    <h1>My menu</h1>
+    <p>Everything is made in small batches. Flavors rotate, so ask me what's fresh today.</p>
+  </div>
+
+  <nav class="menu-jump" aria-label="Menu sections">
+    <a href="#sweet">Sweet</a>
+    <a href="#salty">Salty</a>
+  </nav>
+
+  <!-- ===================== SWEET ===================== -->
+  <section class="menu-section menu-section--sweet" id="sweet" aria-labelledby="sweet-heading">
+    <div class="menu-section__header">
+      <p class="menu-section__eyebrow">menu</p>
+      <h2 id="sweet-heading">sweet</h2>
+    </div>
+
+    <ul class="menu-list">
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">butterscotch date cake</h3>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">brownies</h3>
+          <p class="menu-item__variants">plain · triple chocolate · walnut</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">cheesecake</h3>
+          <p class="menu-item__variants">biscoff · chocolate · dubai chocolate · keylime · mango lassi · plain · raspberry</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">chocolate almond croissants</h3>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">cobbler</h3>
+          <p class="menu-item__variants">apple · blueberry · peach · pineapple · strawberry</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">cookies</h3>
+          <p class="menu-item__variants">chocolate chip · chocolate peanut butter · triple chocolate</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">milk cake</h3>
+          <p class="menu-item__variants">biscoff · coconut · chocolate · mango · pistachio · vanilla</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">mousse cake</h3>
+          <p class="menu-item__variants">biscoff · hazelnut · peanut butter</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">tiramisu</h3>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===================== SALTY ===================== -->
+  <section class="menu-section menu-section--salty" id="salty" aria-labelledby="salty-heading">
+    <div class="menu-section__header">
+      <p class="menu-section__eyebrow">menu</p>
+      <h2 id="salty-heading">salty</h2>
+    </div>
+
+    <ul class="menu-list">
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">flakey bites</h3>
+          <p class="menu-item__variants">birria · bbq pulled beef · chicken chipotle · spinach feta</p>
+        </div>
+      </li>
+
+      <li class="menu-item">
+        <div class="menu-item__media" aria-hidden="true"></div>
+        <div class="menu-item__body">
+          <h3 class="menu-item__name">pies</h3>
+          <p class="menu-item__variants">chicken pot pie · beef stew</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <p class="menu-note">Have a question or a custom order? <a href="mailto:contact@amani.coffee">Get in touch</a>.</p>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Amani · <a href="mailto:contact@amani.coffee">contact@amani.coffee</a></p>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
